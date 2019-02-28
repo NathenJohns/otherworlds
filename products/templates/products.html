@@ -1,25 +1,42 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
 <div class="row row-flex">
+    <div class="container">
+        <div class="display">
+            <form action="{% url 'search' %}" method="get">
+                <input type="text" name="q">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <hr>
     {% for product in products %}
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-4 display panel panel-default">
+
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+        {% if product.available %}
         <div class="panel-body">
-            <div class="product" style="background-image: url('{{MEDIA_URL }}{{ product.image }}')">
-                <h3>{{ product.name}}</h3>
-                <p class="product-description">{{ product.description }}</p>
-                <p>{{ product.price }}</p>
-                
-                <form method="POST" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input type="number" name="quantity" min="1" max="999" class="form-control" placeholder="Quantity"/>
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+            
+        {% else %}
+        <div class="panel-body">
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"><h2 class="sold-out">Sold Out!</h2></div>
+            
+        {% endif %}
+            <h3>{{ product.name }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <p>{{ product.price }}</p>
+            <p>In Stock: {{ product.stock }}</p>
+    
+            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit">Add</button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </form>
         </div>
     </div>
     {% endfor %}

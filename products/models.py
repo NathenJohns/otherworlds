@@ -6,6 +6,8 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
+    available = models.BooleanField(default=True)
+    stock = models.IntegerField(default=5)
 
     def __str__(self):
         return self.name

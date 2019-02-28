@@ -1,5 +1,82 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
 
-{% end block %}
+<div class="bg-img">
+    <div class="landing-text">
+        <h1>OTHERWORLDS</h1>
+        <h3>Beautiful, handcrafted creations.</h3>
+        <a href="{% url 'products' %}" class="btn btn-default btn-lg">Shop All</a>
+    </div>
+</div>
+
+<div class="padding">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="media/images/dragon-necklace-4.jpg">
+        </div>
+        <div class="col-sm-6 text-center">
+            <h2>About Otherworlds</h2>
+            <p class="lead">With over 20 years in design and craftwork...</p>
+            <p class="lead">At Otherworlds, we create unusual and whimsical, handmade crochet wire jewellery that evokes delight and fun in all creations.</p>
+            <p class="lead">Working mainly by crocheting coloured wire, gemstones and beads, all manor of creatures and characters have come to life.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="fixed" class="container-fluid text-center">
+    <div class="row home-categories">
+        <div class="col-sm-12">
+            <h2>Shop Categories</h2>
+        </div>
+        <div class="col-sm-3">
+            <p><a href="#">Baskets</a></p>
+        </div>
+        <div class="col-sm-3">
+            <p><a href="#">Pendants</a></p>
+        </div>
+        <div class="col-sm-3">
+            <p><a href="#">Brooches</a></p>
+        </div>
+        <div class="col-sm-3">
+            <p><a href="#">Necklaces</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="padding">
+<div class="container-fluid text-center">
+    <div class="row">
+         <div class="col-sm-6 home-connect">
+            <h2>Connect</h2>
+            <p class="lead">Are you looking for something bespoke?</p>
+            <p>Let us know about a design you have in mind and we can see if we can create it for you.</p>
+            <p>Why not get in touch using any of the following ways options...</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/saffronjohns" target="_blank" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-envelope"></a>
+            <a href="https://www.instagram.com/saffronjohns/" target="_blank" class="fa fa-instagram"></a>
+        </div>
+        <div class="col-sm-6 octopus">
+            <img src="media/images/octopus-brooch-1.jpg">
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
