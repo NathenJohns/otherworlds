@@ -33,13 +33,13 @@
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'products' %}">Shop</a></li>
                         <li><a href="{% url 'logout' %}">Log Out</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     {%  else %}
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'products' %}">Shop</a></li>
                         <li><a href="{% url 'register' %}">Register</a></li>
                         <li><a href="{% url 'login' %}">Log In</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
@@ -72,22 +72,22 @@
     <footer class="container-fluid text-center">
         <div class="row footer-headers">
             <div class="col-sm-4">
-                <h4>Contact</h4>
+                <h4><a href="{% url 'contact' %}">Contact</a></h4>
                 <p>Email: xxxxxxx@xxxx.xx.xx</p>
-                <p>Phone: 01234 567890</p>
+                <p class="final">Phone: 01234 567890</p>
             </div>
             <div class="col-sm-4">
                 <h4>Otherworlds</h4>
                 <p>Website Designed and Built by <a href="#">.team</a></p>
                 <p>Copyright @ 2019 Otherworlds</p>
-                <p>All rights reserved</p>
+                <p class="final">All rights reserved</p>
             </div>
             <div class="col-sm-4 footer-information">
                 <h4>Information</h4>
-                <p><a href="#">Policies</a></p>
+                <p><a href="{% url 'policies' %}">Policies</a></p>
                 <p><a href="{% url 'index' %}">About</a></p>
-                <p><a href="#">FAQ</a></p>
-                <p><a href="#">Reviews</a></p>
+                <p><a href="{% url 'faq' %}">FAQ</a></p>
+                <p class="final"><a href="{% url 'reviews' %}">Reviews</a></p>
             </div>
         </div>
     </footer>

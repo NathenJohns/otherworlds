@@ -10,18 +10,28 @@ html, body {
 
 .navbar {
     background-color: #3d1126;
-    padding: 0.5% 0;
+    padding: 4px 0;
     font-size: 1.2em;
 }
 
 .nav-header a {
     color: #FFF;
     font-weight: 500;
+    margin-left: 10px;
 }
 
 .nav-header a:hover {
     color: #634051;
     text-decoration: none;
+}
+
+.navbar-default {
+    background-color: #3d1126;
+    border-color: #3d1126;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #3d1126;
 }
 
 .navbar-default .navbar-nav li a {
@@ -32,7 +42,7 @@ html, body {
     color: #634051;
 }
 
-.icon-bar {
+.navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
 
@@ -42,12 +52,22 @@ footer {
     width: 100%;
     background-color: #3d1126;
     color: #FFF;
-    margin-bottom: 15px;
 }
 
 .footer-headers h4 {
     text-transform: uppercase;
     margin-top: 20px;
+}
+
+.footer-headers h4 a {
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.footer-headers h4 a:hover {
+    color: #634051;
 }
 
 .footer-information p a {
@@ -59,12 +79,16 @@ footer {
     text-decoration: none;
 }
 
+footer .row {
+    margin-bottom: 15px;
+}
+
 /* HOME PAGE */
 
 /*Home Page*/
 
 .padding {
-    padding: 75px 0;
+    padding: 50px 0;
 }
 
 .padding img {
@@ -77,29 +101,81 @@ footer {
 
 /*Home Page Banner Image */
 
-.bg-img {
-    background-image: url("https://bit.ly/2VropjW");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+#slider .item {
+    height: 90vh;
+}
+
+#slide1 {
+    background: url("https://bit.ly/2VropjW") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     padding: 0;
-    margin-top: 0;
+    margin-top: 65px;
     width: 100%;
     height: 100vh;
 }
 
-.landing-text {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+#slide2 {
+    background: url("https://bit.ly/2XFP8KQ") center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 0;
+    margin-top: 65px;
+    width: 100%;
 }
 
-.landing-text h1 {
-    font-size: 500%;
+#slide3 {
+    background: url("https://bit.ly/2Tp5mtr") center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 0;
+    margin-top: 65px;
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 40%;
+    left: 15%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-caption h4 {
+    font-size: 4em;
     font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.carousel-caption .btn {
+    background-color: #390920ed;
+    border-color: #390920ed;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
+}
+
+.about-header {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.about-header p {
+    text-transform: none;
+    font-weight: normal;
+    margin: 35px;
 }
 
 /* Categories */
@@ -118,6 +194,7 @@ footer {
     font-weight: 900;
     color: #4f104f;
 }
+
 .home-categories p a {
     font-size: 25px;
     color: #FFF;
@@ -132,6 +209,16 @@ footer {
 
 .home-categories h2 {
     margin: 25px 0px 25px 0px;
+}
+
+.home-categories img {
+    width: 13em;
+    margin-bottom: 35px;
+    border-radius: 50%;
+}
+
+.home-categories img:hover {
+    width: 13.5em;
 }
 
 /* Connect */
@@ -159,81 +246,114 @@ footer {
     text-decoration: none;
 }
 
+/* PRODUCTS PAGE */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CSS TO CHECK */
-
-
-
-.accountform {
-    padding-top: 20px;
+.products-heading {
+    margin-top: 7.5%;
+    margin-bottom: 2.5%;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
+.search input {
+    border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
 }
 
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
+.search {
+    text-align: center;
+    margin-bottom: 2.5%;
 }
 
-.product {
-    background-size: contain;
+.search button {
+    border-radius: 5px;
+    background-color: #390920ed;
+    border-color: #390920ed;
+    color: #FFF;
+    border-width: 1px;
+}
+
+.search button:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
+}
+
+/*Products */
+
+.panel {
+    margin: 0px 10px 20px 10px;
+    background-color: #f4efef;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    width: 25em;
+}
+
+.input-group {
+    width: 65%;
+}
+
+.input-group-btn button {
+    background-color: #390920ed;
+    border-color: #390920ed;
+    color: #FFF;
+}
+
+.input-group-btn button:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
+}
+
+form .quantity-form {
+    width: 50%;
+}
+
+.product-image {
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: 25em;
     margin: 0 auto;
 }
 
 .sold-out {
-    font-weight: 500;
-    font-size: 100px;
+    font-weight: 900;
+    margin-top: -4px;
+    margin-bottom: 5px;
+    color: #FFF;
 }
 
-caption p {
-    word-wrap: break-word;
+.panel-sold-out {
+    margin: 0px 10px 20px 10px;
+    background-color: #000000ba;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    width: 25em;
 }
 
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 250px;
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .final {
+        margin-bottom: 35px;
+    }
+    
+    .footer-headers h4 {
+        margin-top: 30px;
+    }
+    
+    .nav-header a {
+        margin-left: 20px;
+}
 }
 
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
-}
 
-.panel-body {
-    height: 100%;
-    border: 1px solid #ddd;
-}
 
-.product-description {
-    min-height: 40px;
-}
+
+
+
