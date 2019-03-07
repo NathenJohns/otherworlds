@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: #FFF;
+    font-family: 'Merriweather', serif;
 }
 
 /* BASE */
@@ -138,9 +139,9 @@ footer .row {
 
 .carousel-caption {
     position: absolute;
-    right: 15%;
+    right: 15px;
     top: 40%;
-    left: 15%;
+    left: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
@@ -160,6 +161,7 @@ footer .row {
     border-color: #390920ed;
     color: #FFF;
     border-radius: 5px;
+    border: none;
 }
 
 .carousel-caption .btn:hover {
@@ -169,7 +171,11 @@ footer .row {
 
 .about-header {
     text-transform: uppercase;
-    font-weight: 900;
+    color: #4f104f;
+}
+
+.about-header h2 {
+    font-weight: 600;
 }
 
 .about-header p {
@@ -209,6 +215,7 @@ footer .row {
 
 .home-categories h2 {
     margin: 25px 0px 25px 0px;
+    font-weight: 600;
 }
 
 .home-categories img {
@@ -235,6 +242,10 @@ footer .row {
     margin: 35px;
 }
 
+.home-connect h2 {
+    font-weight: 600;
+}
+
 .fa {
     padding: 15px;
     font-size:35px;
@@ -249,21 +260,24 @@ footer .row {
 /* PRODUCTS PAGE */
 
 .products-heading {
-    margin-top: 7.5%;
-    margin-bottom: 2.5%;
+    margin-top: 100px;
+    margin-bottom: 25px;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 600;
+    color: #4f104f;
 }
 
 .search input {
     border-radius: 5px;
     border-color: black;
     border-width: 1px;
+    margin-bottom: 25px;
 }
 
 .search {
     text-align: center;
-    margin-bottom: 2.5%;
+    margin-bottom: 5px;
 }
 
 .search button {
@@ -282,17 +296,17 @@ footer .row {
 /*Products */
 
 .panel {
-    margin: 0px 10px 20px 10px;
+    margin: 0px -3px 20px 0px;
     background-color: #f4efef;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    width: 25em;
+
 }
 
 .input-group {
-    width: 65%;
+    width: 100%;
 }
 
 .input-group-btn button {
@@ -319,21 +333,54 @@ form .quantity-form {
     margin: 0 auto;
 }
 
-.sold-out {
-    font-weight: 900;
-    margin-top: -4px;
-    margin-bottom: 5px;
-    color: #FFF;
+/* REGISTER AND LOGIN FORMS */
+
+.accountform {
+    text-align: center;
+    margin: 7em 0 5.1em 0;
 }
 
-.panel-sold-out {
-    margin: 0px 10px 20px 10px;
-    background-color: #000000ba;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    width: 25em;
+.form-group {
+    margin: 10px 0px 35px 0px;
+}
+
+.form-group h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #4f104f;
+    border-bottom: none;
+    margin-bottom: 40px;
+}
+
+.form-group a {
+    text-decoration: none;
+}
+
+.register-button {
+    color: #fff;
+    background-color: #3d1126;
+    border-color: #3d1126;
+    border: none;
+    border-radius: 5px;
+}
+
+.register-button:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
+}
+
+.login-button {
+    color: #fff;
+    background-color: #3d1126;
+    border-color: #3d1126;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.login-button:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
 }
 
 /* MEDIA QUERIES */
@@ -349,11 +396,9 @@ form .quantity-form {
     
     .nav-header a {
         margin-left: 20px;
+    }
+    
+    .carousel-caption h4 {
+        font-size: 2.1em;
+    }
 }
-}
-
-
-
-
-
-

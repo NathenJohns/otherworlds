@@ -10,6 +10,7 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% block head_js %}
     {% endblock head_js %}
@@ -53,19 +54,6 @@
             </div>
         </div>
     </nav>
-    
-    <!--Messages Alert -->
-    <div class="row">
-        {% if messages %}
-            <div class="alert alert-success">
-                <div class="messages">
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-    </div>
     
     {% block content %} {% endblock %}
     
