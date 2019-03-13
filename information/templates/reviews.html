@@ -1,7 +1,57 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-<div>
-    <h1>Reviews</h1>
+<div class="container-fluid">
+    <div class="row">
+       <div class="col">
+            <h1 class="reviews-heading">Reviews</h1>
+            <p class="lead">Don't take our word for it, check out some of the reviews we've received!</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row reviews-header">
+            <div class="col-sm-6 col-md-6">
+                <div class="reviews-p">
+                    <p>"Saffron was great to work with. Her replies were timely, and the packaging was great. The brooch is a sight to behold, and is simply gorgeous. It is very fragile, so I will likely be using it as a display piece.</p>
+                    <p>The artist's item was well-crafted, and I am looking forward to enjoying it for a lifetime. I will definitely buy from this store again, as the customer service and artwork were both top-notch."</p>
+                    <div class="author">
+                        <p>- Leslie A. Zukor on 17 Feb, 2019</p>
+                    </div>
+                </div>
+                
+                <div class="reviews-p">
+                    <p>"Wonderfully unique. Going to a good home. Would highly recommend."</p>
+                    <div class="author">
+                        <p>- ryancook41 on 27 Nov, 2016</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6">
+                <div class="reviews-p">
+                    <p>"Another wonderful brooch absolutely love these. They are so well thought out and detailed. Amazing. Thank you."</p>
+                    <div class="author">
+                        <p>- Lynne on 31 Jan, 2019</p>
+                    </div>
+                </div>
+                
+                <div class="reviews-p">
+                    <p>"LOVE this artist; both pieces I received were magnificent, and they arrived incredibly FAST!!"</p>
+                    <div class="author">
+                        <p>- Katharine on 30 Nov, 2018</p>
+                    </div>
+                </div>
+                
+                <div class="reviews-p">
+                    <p>"Incredible artistry, beautiful, lifelike details, thank you so much, fast delivery, it came in a nice personal box! Highly recommend the shop!"</p>
+                    <div class="author">
+                        <p>- anonym on 23 Sep, 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
