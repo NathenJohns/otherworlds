@@ -17,12 +17,21 @@
         </div>
     </div>
 
-    <!-- Filter Menu -->
+    <!-- Filter Menu--
     <div class="row">
         <div class="container">
-            
+            <form action="" method="get">
+                {{ filter.form.as_p }}
+                <input type="submit"/>
+            </form>
+            {% for obj in filter.qs %}
+                {{ obj.category }} - ${{ obj.price }}<br />
+            {% endfor %}
         </div>
     </div>
+    -->
+    
+    
     
     <!--Products -->
     <div class="row">
@@ -33,7 +42,9 @@
                     <div class="panel-body">
                         <h4>{{ product.name }}</h4>
                         <p class="price">£{{ product.price }}</p>
-                        <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+                        <a href="{% url 'product-detail' product.pk %}">
+                            <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_main }}')"></div>
+                        </a>
                         <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
                             <div class="input-group">

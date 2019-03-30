@@ -110,41 +110,39 @@ footer .row {
     width: 75%;
 }
 
-/*Home Page Banner Image */
+/*Home Page Banner Image 
 
 #slider .item {
     height: 90vh;
 }
+*/
 
 #slide1 {
-    background: url("https://bit.ly/2VropjW") center no-repeat;
+    background: url("https://bit.ly/2HOIJIG") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    padding: 0;
     margin-top: 65px;
     width: 100%;
     height: 100vh;
 }
 
 #slide2 {
-    background: url("https://bit.ly/2XFP8KQ") center no-repeat;
+    background: url("https://bit.ly/2JOtm4F") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    padding: 0;
-    margin-top: 65px;
     width: 100%;
+    height: 100vh;
 }
 
 #slide3 {
-    background: url("https://bit.ly/2Tp5mtr") center no-repeat;
+    background: url("https://bit.ly/2FMxm1E") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    padding: 0;
-    margin-top: 65px;
     width: 100%;
+    height: 100vh;
 }
 
 .carousel-caption {
@@ -156,7 +154,7 @@ footer .row {
     padding-bottom: 20px;
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 0 2px 2px rgba(0,0,0);
 }
 
 .carousel-caption h4 {
@@ -202,7 +200,7 @@ footer .row {
     position: relative;
     width: 100%;
     background-size: cover;
-    background-color: #6d0a3a9c;
+    background-color: #6d0a3ac7;
 }
 
 .home-categories {
@@ -346,6 +344,48 @@ form .quantity-form {
 
 .price {
     font-weight: 900;
+}
+
+/* Product Detail Page */
+
+.description-p {
+    font-weight: 600;
+    margin-top: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    text-align: center;
+}
+
+.back-btn a {
+    margin: 10px 0 35px 0;
+}
+
+.product-image-display ul {
+    list-style-type: none;
+}
+
+.thumb li {
+    display: inline;
+    margin: 5px 10px;
+    height: 10%;
+    width: 10%;
+    border: 1px solid rgba(0,0,0,.2); 
+}
+
+.back-btn .btn-success {
+    background-color: #390920ed;
+    border-color: #390920ed;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+}
+
+.back-btn .btn-success:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
 }
 
 /* REGISTER AND LOGIN FORMS */
