@@ -47,6 +47,20 @@ html, body {
     background-color: #fff;
 }
 
+.shopping-basket .fa {
+    font-size: 22.5px;
+    padding: 12px;
+}
+
+.badge {
+    background-color: #bd7497f0;
+    vertical-align: top;
+    padding: 2px 6px;
+    font-weight: 600;
+    display: inline;
+    font-size: 9px;
+}
+
 /* Footer */
 
 footer {
@@ -318,15 +332,37 @@ footer .row {
     margin-top: 15px;
 }
 
-.input-group-btn button {
+.input-group-btn .btn-success-btn button {
     background-color: #390920ed;
     border-color: #390920ed;
     color: #FFF;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .input-group-btn button:hover {
     background-color: #390920b8;
     border-color: #390920b8;
+}
+
+#remove-btn {
+    text-align: center;
+}
+
+.btn-danger {
+    color: #fff;
+    padding: 0px 5px;
+    border-color: #dc1811;
+    background-color: #dc1811;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #dc1811bf;
+    border-color: #dc1811bf;
 }
 
 form .quantity-form {

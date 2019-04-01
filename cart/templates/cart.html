@@ -29,7 +29,7 @@
                     <h4>{{ item.product.name }}</h4>
                     <p>£{{ item.product.price }}</p>
                     
-                    <div class="product-image" style="background-image: url('{{ MEDIA_URL}}{{ item.product.image_main }}')"></div>
+                    <div class="product-image" style="background-image: url('{{ MEDIA_URL}}{{ item.product.image_1 }}')"></div>
                     
                     <p>
                         <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
@@ -40,8 +40,13 @@
                                     <input name='quantity' type="number" min="0" max="999" class="form-control" placeholder="Quantity">
                                     <div class="input-group-addon">{{ item.quantity }}</div>
                                     <span class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Amend</button>
+                                        <div class="btn-success-btn">
+                                            <button class="btn btn-success" type="submit">Amend</button>
+                                        </div>
                                     </span>
+                                </div>
+                                <div id="remove-btn">
+                                    <button class="btn btn-danger" type="submit">x</button>
                                 </div>
                             </div>
                         </form>

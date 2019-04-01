@@ -42,14 +42,16 @@
                         <li><a href="{% url 'login' %}">Log In</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>
                     {% endif %}
-                    <li>
-                        <a href="{% url 'view_cart' %}">
-                            Checkout
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
-                        </a>
-                    </li>
+                    {% if product_count > 0 %}
+                        <li>
+                            <div class="shopping-basket">
+                                <a href="{% url 'view_cart' %}" class="fa fa-shopping-basket">
+                                    <label class="badge badge-warning">{{ product_count }}</label>
+                                </a>
+                            </div>
+                        </li>
+                    {% else %}
+                    {% endif %}
                 </ul>
             </div>
         </div>
