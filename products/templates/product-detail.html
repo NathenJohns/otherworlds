@@ -15,47 +15,16 @@
                     {% if product.available %}
                         <div class="panel panel-default">
                             <div class="col-sm-6 col-md-6 col-lg-12 panel-body">
-                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_main }}')"></div>
-                                
                                 <div class="row product-image-display">
                                     <ul class="thumb">
-                                        <li>
-                                            <a href="#">
-                                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_2 }}')"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_3 }}')"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_4 }}')"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_5 }}')"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_6 }}')"></div>
-                                            </a>
-                                        </li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div></a></li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_2 }}')"></div></a></li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_3 }}')"></div></a></li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_4 }}')"></div></a></li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_5 }}')"></div></a></li>
+                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_6 }}')"></div></a></li>
                                     </ul>
                                 </div>
-                                
-                                <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
-                                    {% csrf_token %}
-                                    <div class="input-group">
-                                        <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-success" type="submit">Add</button>
-                                        </span>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     {% endif %}
@@ -68,6 +37,15 @@
                         <p class="description-p">{{ product.description }}</p>
                         <h4>£{{ product.price }}</h4>
                     </div>
+                    <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Add</button>
+                            </span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
