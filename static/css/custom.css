@@ -151,7 +151,7 @@ footer .row {
 }
 
 #slide3 {
-    background: url("https://bit.ly/2FMxm1E") center no-repeat;
+    background: url("https://bit.ly/2FP3d1E") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -214,13 +214,14 @@ footer .row {
     position: relative;
     width: 100%;
     background-size: cover;
-    background-color: #6d0a3ac7;
+    background-color: #3d1126;
+    border-color: #3d1126;
 }
 
 .home-categories {
     text-transform: uppercase;
     font-weight: 900;
-    color: #4f104f;
+    color: #fff;
 }
 
 .home-categories p a {
@@ -472,6 +473,10 @@ form .quantity-form {
 
 /* REGISTER AND LOGIN FORMS */
 
+.messages {
+    margin-bottom: 10px;
+}
+
 .accountform {
     text-align: center;
     margin: 7em 0 5.1em 0;
@@ -486,7 +491,7 @@ form .quantity-form {
     font-weight: 600;
     color: #4f104f;
     border-bottom: none;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .form-group a {

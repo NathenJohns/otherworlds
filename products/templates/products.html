@@ -4,6 +4,13 @@
     <div class="row">
        <div class="col">
             <h1 class="products-heading">All Products</h1>
+            {% if messages %}
+                <div class="messages alert alert-success">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
     </div>
     
@@ -16,7 +23,7 @@
             </form>
         </div>
     </div>
-
+    
     <!-- Filter Menu--
     <div class="row">
         <div class="container">

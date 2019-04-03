@@ -15,8 +15,8 @@ def index(request):
 def logout(request):
     """A view that logs the user out and redirects back to the index page"""
     auth.logout(request)
-    messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    messages.success(request, "You have successfully logged out!")
+    return redirect(reverse('login'))
 
 
 def login(request):
@@ -34,7 +34,7 @@ def login(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('index'))
+                    return redirect(reverse('products'))
             else:
                 user_form.add_error(None, "Your username or password is incorrect")
     else:
@@ -56,10 +56,10 @@ def register(request):
             if user:
                 auth.login(request, user)
                 messages.success(request, "You have successfully registered")
-                return redirect(reverse('index'))
+                return redirect(reverse('login'))
 
             else:
-                messages.error(request, "unable to log you in at this time!")
+                messages.error(request, "Unable to log you in at this time!")
     else:
         user_form = UserRegistrationForm()
 
