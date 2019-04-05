@@ -5,48 +5,8 @@
 
 <div class="container">
     <div class="products-padding">
-        <div class="col-lg-4">
-            <div class="col-lg-5">
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_2 }}')"></div>
-                    </a>
-                </div>
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_3 }}')"></div>
-                    </a>
-                </div>
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_4 }}')"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_5 }}')"></div>
-                    </a>
-                </div>
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_6 }}')"></div>
-                    </a>
-                </div>
-                <div class="thumb-container">
-                    <a href="" target="image-container">
-                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
         
-        <div class="col-lg-4">
-            <div class="image-container">
-                <div class="product-detail-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div>
-            </div>
-        </div>
+        <!--Description -->
         
         <div class="col-lg-4">
             <div class="description-container">
@@ -70,7 +30,75 @@
             </div>
         </div>
         
-        <div class="container">
+        <!-- Thumbnails -->
+        
+        <div class="col-lg-4">
+            <div class="thumbnail-main-containers">
+                <div class="col-lg-6">
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_1 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_1 }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_2 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_2 }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_3 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_3 }}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail-main-containers">
+                <div class="col-lg-6">
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_4 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_4 }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_5 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_5 }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-container">
+                        <div class="product-thumb-image">
+                            <a href="{{ MEDIA_URL }}{{ product.image_6 }}" target="image-container">
+                                <img src="{{ MEDIA_URL }}{{ product.image_6 }}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Image -->
+        
+        <div class="col-lg-4">
+            <div class="image-container">
+                <div class="product-detail-image">
+                    <img src="{{ MEDIA_URL }}{{ product.image_1 }}">
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Back Button -->
+        
+        <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="back-btn">
                     <a href="{% url 'products' %}" class="btn btn-success" role="button>">Back</a>

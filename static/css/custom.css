@@ -282,11 +282,7 @@ footer .row {
 
 /* PRODUCTS PAGE */
 
-.products-padding {
-    margin-top: 100px;
-    margin-bottom: 55px;
-}
-
+/*Products */
 .search input {
     border-radius: 5px;
     border-color: black;
@@ -312,7 +308,14 @@ footer .row {
     border-color: #390920b8;
 }
 
-/*Products */
+.products-heading {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #4f104f;
+}
 
 .panel {
     margin: 0px -3px 20px 0px;
@@ -346,20 +349,20 @@ footer .row {
     text-align: center;
 }
 
-.btn-danger {
-    color: #fff;
+.btn-remove {
+    color: #390920b8;
     padding: 0px 5px;
-    border-color: #dc1811;
-    background-color: #dc1811;
+    border-color: transparent;
+    background-color: transparent;
     font-weight: 500;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.btn-danger:hover {
+.btn-remove:hover {
     color: #fff;
-    background-color: #dc1811bf;
-    border-color: #dc1811bf;
+    background-color: #390920b8;
+    border-color: #390920b8;
 }
 
 form .quantity-form {
@@ -427,16 +430,25 @@ form .quantity-form {
 
 /* Product Detail Page */
 
+.products-padding {
+    margin-top: 100px;
+    margin-bottom: 55px;
+}
+
 .description-container {
-    margin-left: 15px;
+    margin: 0 5em 0 0;
     text-align: justify;
-    
 }
 
 .description-container h1 {
     color: #4f104f;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.thumbnail-main-containers {
+    margin-right: 7.5em;
+    margin-left: -3em;
 }
 
 .thumb-container {
@@ -446,7 +458,7 @@ form .quantity-form {
     margin: 20px 15px 30px 0px;
 }
 
-.product-thumb-image {
+.product-thumb-image img {
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
@@ -455,20 +467,26 @@ form .quantity-form {
 }
 
 .image-container {
-    height: 30em;
-    width: 30em;
+    height: 29.8em;
+    width: 31em;
     border: 1px solid rgb(0,0,0,0.2);
-    margin: 20px 0px 30px 10px;
+    margin: 20px 0px 30px 0px;
     float: right;
 }
 
-.product-detail-image {
+.product-detail-image img {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: auto;
-    height: 29em;
+    height: 28em;
     margin: 0 auto;
+}
+
+.product-detail-image:hover {
+    margin-top: 5em;
+    transform: scale(1.6);
+    border: 1px solid rgb(0,0,0,0.2);
 }
 
 .description-p {
@@ -479,11 +497,11 @@ form .quantity-form {
 }
 
 .back-btn {
-    text-align: center;
+    text-align: left;
 }
 
 .back-btn a {
-    margin: 10px 0 35px 0;
+    margin: 7.5em 0 0 0;
 }
 
 .product-image-display ul {
@@ -516,6 +534,7 @@ form .quantity-form {
 .messages {
     margin-bottom: 15px;
     text-align: center;
+    font-weight: 600;
 }
 
 .accountform {

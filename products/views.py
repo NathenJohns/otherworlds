@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def all_products(request):
     products_list = Product.objects.all()
     
-    paginator = Paginator(products_list, 4)
+    paginator = Paginator(products_list, 8)
 
     try:
         page = int(request.GET.get('page', '1'))

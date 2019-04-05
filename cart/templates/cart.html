@@ -26,8 +26,17 @@
             {% for item in cart_items %}
             <div class="col-xs-12 col-xs-offset-2 col-sm-6 col-md-6 col-lg-3 panel panel-default">
                 <div class="panel-body">
-                    <h4>{{ item.product.name }}</h4>
-                    <p>£{{ item.product.price }}</p>
+                    <div class="col-lg-6">
+                        <h4>{{ item.product.name }}</h4>
+                        <p>£{{ item.product.price }}</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="col-lg-3 col-lg-offset-9">
+                            <div id="remove-btn">
+                                <a href="{% url 'products' %}" class="btn btn-remove" role="button>">x</a>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="product-image" style="background-image: url('{{ MEDIA_URL}}{{ item.product.image_1 }}')"></div>
                     
@@ -45,9 +54,7 @@
                                         </div>
                                     </span>
                                 </div>
-                                <div id="remove-btn">
-                                    <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-danger">x</button>
-                                </div>
+                                
                             </div>
                         </form>
                     </p>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    
 </head>
 <body>
     <!--Navigation -->
@@ -90,6 +91,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type"text/javascript">
+        $(document).ready(function(){
+            $('.product-thumb-image a').mouseover(function(e){
+                e.preventDefault();
+                $('.image-container img').attr("src", $(this).attr("href"));
+            })
+        });
+    </script>
+    
     {% block head_js %}
     {% endblock head_js %}
 </body>
