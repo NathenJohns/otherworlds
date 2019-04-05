@@ -3,84 +3,74 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-       <div class="col">
-            <h1 class="products-heading">{{ product.name }}</h1>
-        </div>
-        
-        <div class="carousel slide" id="slider" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li class="active" data-slide-to="0" data-target="#slider"></li>
-                <li data-slide-to="1" data-target="#slider"></li>
-                <li data-slide-to="2" data-target="#slider"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="carousel-caption">
-                        <h4>Otherworlds</h4>
-                    </div>
+<div class="container">
+    <div class="products-padding">
+        <div class="col-lg-4">
+            <div class="col-lg-5">
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_2 }}')"></div>
+                    </a>
                 </div>
-                <div class="item">
-                    <div class="carousel-caption">
-                        <h4>Beautiful, handcrafted creatures</h4>
-                    </div>
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_3 }}')"></div>
+                    </a>
                 </div>
-                <div class="item">
-                    <div class="carousel-caption">
-                        <h4>Explore our collection</h4>
-                        <a href="{% url 'products' %}" class="btn btn-default btn-lg">Shop All</a>
-                    </div>
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_4 }}')"></div>
+                    </a>
                 </div>
             </div>
-            <a class="left carousel-control" href="#slider" data-slide="prev" role="button"><span class="icon-prev"></span></a>
-            <a class="right carousel-control" href="#slider" data-slide="next" role="button"><span class="icon-next"></span></a>
+            <div class="col-lg-7">
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_5 }}')"></div>
+                    </a>
+                </div>
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_6 }}')"></div>
+                    </a>
+                </div>
+                <div class="thumb-container">
+                    <a href="" target="image-container">
+                        <div class="product-thumb-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div>
+                    </a>
+                </div>
+            </div>
         </div>
         
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    {% if product.available %}
-                        <div class="panel panel-default">
-                            <div class="col-sm-6 col-md-6 col-lg-12 panel-body">
-                                <div class="row product-image-display">
-                                    <ul class="thumb">
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div></a></li>
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_2 }}')"></div></a></li>
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_3 }}')"></div></a></li>
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_4 }}')"></div></a></li>
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_5 }}')"></div></a></li>
-                                        <li><a href="#"><div class="product-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_6 }}')"></div></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                 </div>
-                
-                <div class="col-lg-6">
-                    <h3>Product Description</h3>
-                    <h4>{{ product.category }}</h4>
-                    <div class="information-p">
-                        <p class="description-p">{{ product.description }}</p>
-                        <h4>£{{ product.price }}</h4>
-                    </div>
-                    <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+        <div class="col-lg-4">
+            <div class="image-container">
+                <div class="product-detail-image" style="background-image: url('{{ MEDIA_URL }}{{ product.image_1 }}')"></div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="description-container">
+                <h1>{{ product.name }}</h1>
+                <h3>{{ product.category }}</h3>
+                <div class="information-p">
+                    <p class="description-p">{{ product.description }}</p>
+                    <h4>£{{ product.price }}</h4>
+                </div>
+                <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
                             <span class="input-group-btn">
                                 <div class="btn-success-btn">
                                     <button class="btn btn-success" type="submit">Add</button>
                                 </div>
                             </span>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
         
-        <div class="container-fluid">
+        <div class="container">
             <div class="col-lg-12">
                 <div class="back-btn">
                     <a href="{% url 'products' %}" class="btn btn-success" role="button>">Back</a>

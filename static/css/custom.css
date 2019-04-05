@@ -282,13 +282,9 @@ footer .row {
 
 /* PRODUCTS PAGE */
 
-.products-heading {
+.products-padding {
     margin-top: 100px;
-    margin-bottom: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #4f104f;
+    margin-bottom: 55px;
 }
 
 .search input {
@@ -430,6 +426,50 @@ form .quantity-form {
 }
 
 /* Product Detail Page */
+
+.description-container {
+    margin-left: 15px;
+    text-align: justify;
+    
+}
+
+.description-container h1 {
+    color: #4f104f;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.thumb-container {
+    height: 8.5em;
+    width: 9em;
+    border: 1px solid rgb(0,0,0,0.2);
+    margin: 20px 15px 30px 0px;
+}
+
+.product-thumb-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 8.3em;
+    margin: 0 auto;
+}
+
+.image-container {
+    height: 30em;
+    width: 30em;
+    border: 1px solid rgb(0,0,0,0.2);
+    margin: 20px 0px 30px 10px;
+    float: right;
+}
+
+.product-detail-image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 29em;
+    margin: 0 auto;
+}
 
 .description-p {
     font-weight: 600;

@@ -46,7 +46,7 @@
                                     </span>
                                 </div>
                                 <div id="remove-btn">
-                                    <button class="btn btn-danger" type="submit">x</button>
+                                    <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-danger">x</button>
                                 </div>
                             </div>
                         </form>

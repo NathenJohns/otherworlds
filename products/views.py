@@ -1,7 +1,7 @@
-from django.shortcuts import render
 from django.shortcuts import *
 from .models import Product, Category
 from django.views import generic
+from django.template import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
