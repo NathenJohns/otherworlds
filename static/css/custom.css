@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: #FFF;
     font-family: 'Merriweather', serif;
@@ -132,7 +132,7 @@ footer .row {
 */
 
 #slide1 {
-    background: url("https://bit.ly/2HOIJIG") center no-repeat;
+    background: url("media/images/main-image.JPG") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -142,7 +142,7 @@ footer .row {
 }
 
 #slide2 {
-    background: url("https://bit.ly/2JOtm4F") center no-repeat;
+    background: url() center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -151,7 +151,7 @@ footer .row {
 }
 
 #slide3 {
-    background: url("https://bit.ly/2FP3d1E") center no-repeat;
+    background: url("") center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -327,6 +327,10 @@ footer .row {
 
 }
 
+.panel-body {
+    padding: 10px;
+}
+
 .input-group {
     width: 100%;
     margin-top: 15px;
@@ -346,12 +350,13 @@ footer .row {
 }
 
 #remove-btn {
-    text-align: center;
+    float: right;
+    margin-right: 10px;
 }
 
 .btn-remove {
     color: #390920b8;
-    padding: 0px 5px;
+    padding: 2.5px 5px;
     border-color: transparent;
     background-color: transparent;
     font-weight: 500;
@@ -436,7 +441,7 @@ form .quantity-form {
 }
 
 .description-container {
-    margin: 0 5em 0 0;
+    margin: 0 0 0 0;
     text-align: justify;
 }
 
@@ -446,54 +451,34 @@ form .quantity-form {
     font-weight: 600;
 }
 
-.thumbnail-main-containers {
-    margin-right: 7.5em;
-    margin-left: -3em;
-}
-
-.thumb-container {
-    height: 8.5em;
-    width: 9em;
-    border: 1px solid rgb(0,0,0,0.2);
-    margin: 20px 15px 30px 0px;
-}
-
-.product-thumb-image img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 8.3em;
-    margin: 0 auto;
-}
-
-.image-container {
-    height: 29.8em;
-    width: 31em;
-    border: 1px solid rgb(0,0,0,0.2);
-    margin: 20px 0px 30px 0px;
-    float: right;
-}
-
-.product-detail-image img {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 28em;
-    margin: 0 auto;
-}
-
-.product-detail-image:hover {
-    margin-top: 5em;
-    transform: scale(1.6);
-    border: 1px solid rgb(0,0,0,0.2);
-}
-
 .description-p {
     font-weight: 600;
     margin-top: 30px;
     line-height: 30px;
     margin-bottom: 15px;
+}
+
+.images-container {
+    position: relative;
+    width: 100%;
+    min-height: 75px;
+    border: 1px solid #D3D3D3;
+    margin-top: 25px;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.thumb-wrapper img {
+    max-height: 70px;
+    width: auto;
+    border: 1px solid #D3D3D3;
+    margin: 10px 0;
+}
+
+.thumb-wrapper ul li {
+    display: inline-block;
 }
 
 .back-btn {
@@ -502,18 +487,6 @@ form .quantity-form {
 
 .back-btn a {
     margin: 7.5em 0 0 0;
-}
-
-.product-image-display ul {
-    list-style-type: none;
-}
-
-.thumb li {
-    display: inline;
-    margin: 5px 10px;
-    height: 10%;
-    width: 10%;
-    border: 1px solid rgba(0,0,0,.2); 
 }
 
 .back-btn .btn-success {
@@ -528,7 +501,6 @@ form .quantity-form {
     background-color: #390920b8;
     border-color: #390920b8;
 }
-
 /* REGISTER AND LOGIN FORMS */
 
 .messages {
@@ -878,6 +850,7 @@ form .quantity-form {
         margin-left: 15px;
         padding-left: 50px;
     }
+    
 }
 
 @media (max-width: 476px) {
