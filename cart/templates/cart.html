@@ -28,7 +28,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div id="remove-btn">
-                            <a href="{% url 'products' %}" class="btn btn-remove" role="button>">x</a>
+                            <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-remove" role="button>">x</a>
                         </div>
                     </div>
                     <div class="row">
@@ -47,7 +47,7 @@
                             <div class="form-group">
                                 <label for="exampleInputAmount" class="sr-only">New Qty</label>
                                 <div class="input-group">
-                                    <input name='quantity' type="number" min="0" max="999" class="form-control" placeholder="Quantity">
+                                    <input name='quantity' type="number" value="{{ item.quantity }}"min="0" max="999" class="form-control" placeholder="Quantity">
                                     <div class="input-group-addon">{{ item.quantity }}</div>
                                     <span class="input-group-btn">
                                         <div class="btn-success-btn">
@@ -66,8 +66,16 @@
     </div>
 </div>
 
-
-
-
-
 {% endblock %}
+
+{% block body_js %}
+    <script type"text/javascript">
+        $(document).ready(function() {
+            $('input[name="quantity"]').change(function(event) {
+                let $inputEl = $(this);
+                let value = $inputEl.val();
+                $inputEl.parent().find('button').attr('disabled', value === '');
+            });
+        });
+    </script>
+{% endblock body_js %}

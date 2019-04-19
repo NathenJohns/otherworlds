@@ -12,6 +12,9 @@ from django.views import static
 from .settings import MEDIA_ROOT
 from django.views.generic import RedirectView
 
+from django.conf import settings
+from django.conf.urls.static import static as django_static
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='index'),
@@ -23,4 +26,4 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
-]
+] + django_static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

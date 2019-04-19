@@ -8,7 +8,6 @@
     <div class="products-padding">
         
         <!--Description -->
-        
         <div class="col-lg-6">
             <div class="description-container">
                 <h1>{{ product.name }}</h1>
@@ -20,7 +19,7 @@
                 <form class="quantity-form" method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input name='quantity' type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                        <input name='quantity' type="number" value="0" min="1" max="999" class="form-control" placeholder="Quantity">
                             <span class="input-group-btn">
                                 <div class="btn-success-btn">
                                     <button class="btn btn-success" type="submit">Add</button>
@@ -31,12 +30,11 @@
             </div>
         </div>
         
+        <!-- Product Images -->
         <div class="col-lg-6">
             <div class="images-container">
                 <div class="image-wrapper">
-                    <a href="{{ MEDIA_URL }}{{ product.image_1 }}" target="_blank">
-                        <img src="{{ MEDIA_URL }}{{ product.image_1 }}">
-                    </a>
+                    <img src="{{ MEDIA_URL }}{{ product.image_1 }}">
                 </div>
                 <div class="thumb-wrapper">
                     <ul>
@@ -75,10 +73,7 @@
             </div>
         </div>
         
-        
-        
         <!-- Back Button -->
-        
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="back-btn">
@@ -89,5 +84,16 @@
     </div>
 </div>
 
-
 {% endblock %}
+
+{% block body_js %}
+    <script type"text/javascript">
+        $(document).ready(function() {
+            $('input[name="quantity"]').change(function(event) {
+                let $inputEl = $(this);
+                let value = $inputEl.val();
+                $inputEl.parent().find('button').attr('disabled', value === '');
+            });
+        });
+    </script>
+{% endblock body_js %}

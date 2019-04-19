@@ -3,6 +3,7 @@
 
 {% block content %}
 
+<!-- Carousel Images -->
 <div class="carousel slide" id="slider" data-ride="carousel">
     <ol class="carousel-indicators">
         <li class="active" data-slide-to="0" data-target="#slider"></li>
@@ -31,6 +32,7 @@
     <a class="right carousel-control" href="#slider" data-slide="next" role="button"><span class="icon-next"></span></a>
 </div>
 
+<!--About Section -->
 <div class="padding">
 <div class="container">
     <div class="row about-header">
@@ -47,30 +49,32 @@
 </div>
 </div>
 
+<!-- Shop by Category Section -->
 <div id="fixed" class="container-fluid text-center">
     <div class="row home-categories">
         <div class="col-sm-12">
             <h2>Shop Categories</h2>
         </div>
         <div class="col-sm-3">
-            <p><a href="#">Baskets</a></p>
-            <a href="#"><img src="media/images/basket.jpg"></a>
+            <p><a href="{% url 'products' %}?category=Basket">Baskets</a></p>
+            <a href="{% url 'products' %}?category=Basket"><img src="media/images/basket.jpg"></a>
         </div>
         <div class="col-sm-3">
-            <p><a href="#">Pendants</a></p>
-            <a href="#"><img src="media/images/pendant.JPG"></a>
+            <p><a href="{% url 'products' %}?category=Pendant">Pendants</a></p>
+            <a href="{% url 'products' %}?category=Pendant"><img src="media/images/pendant.JPG"></a>
         </div>
         <div class="col-sm-3">
-            <p><a href="#">Brooches</a></p>
-            <a href="#"><img src="media/images/eagle-brooch.JPG"></a>
+            <p><a href="{% url 'products' %}?category=Brooch">Brooches</a></p>
+            <a href="{% url 'products' %}?category=Brooch"><img src="media/images/eagle-brooch.JPG"></a>
         </div>
         <div class="col-sm-3">
-            <p><a href="#">Necklaces</a></p>
-            <a href="#"><img src="media/images/flamingos-necklace.JPG"></a>
+            <p><a href="{% url 'products' %}?category=Necklace">Necklaces</a></p>
+            <a href="{% url 'products' %}?category=Necklace"><img src="media/images/flamingos-necklace.JPG"></a>
         </div>
     </div>
 </div>
 
+<!--Social Media Section -->
 <div class="padding">
 <div class="container-fluid text-center">
     <div class="row">

@@ -14,8 +14,8 @@ SECRET_KEY = 'r!-c&i+on^1cosk)%)k!q5pp^8+ra-(9o7i8%ifulspv55^b)o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME')]
-
+# ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME')]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'home',
     'checkout',
     'django_filters',
-    
 ]
 
 MIDDLEWARE = [
@@ -120,8 +119,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# STATIC_ROOT = '/home/ubuntu/workspace/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -136,15 +135,3 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-
-
-
-
-
-
-
-
-
-
-
