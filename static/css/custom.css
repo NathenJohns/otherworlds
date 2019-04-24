@@ -101,7 +101,7 @@ footer .row {
 
 .footer-social a {
     padding: 15px;
-    font-size:20px;
+    font-size: 20px;
     color: #FFF;
 }
 
@@ -126,45 +126,39 @@ footer .row {
     width: 75%;
 }
 
-/*Home Page Banner Image 
-
-#slider .item {
-    height: 90vh;
-}
-*/
+/*Home Page Banner Image */
 
 #slide1 {
-    background: url("media/images/main-image.JPG") center no-repeat;
+    background: url(../../media/images/main-image.JPG) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    margin-top: 65px;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 }
 
 #slide2 {
-    background: url() center no-repeat;
+    background: url(../../media/images/hand-crafted-1.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 130vh;
 }
 
 #slide3 {
-    background: url("") center no-repeat;
+    background: url(../../media/images/items-together.JPG) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 130vh;
 }
 
 .carousel-caption {
     position: absolute;
     right: 15px;
-    top: 40%;
+    top: 35%;
     left: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -189,8 +183,7 @@ footer .row {
 }
 
 .carousel-caption .btn:hover {
-    background-color: #390920b8;
-    border-color: #390920b8;
+    opacity: 0.8;
 }
 
 .about-header {
@@ -696,10 +689,16 @@ form .quantity-form {
     margin: 10px 0 35px 0;
 }
 
-.contact-social {
-    font-weight: 900;
-    color: #4f104f;
-    margin-bottom: 25px;
+.contact-social a {
+    color: #390920ed;
+    margin: 40px 0;
+    font-size: 40px;
+    letter-spacing: 25px;
+}
+
+.contact-social a:hover {
+    opacity: 0.8;
+    text-decoration: none;
 }
 
 /* CHECKOUT */

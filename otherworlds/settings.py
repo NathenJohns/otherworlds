@@ -134,4 +134,9 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
