@@ -872,6 +872,80 @@ form .quantity-form {
     font-weight: 700;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 40%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  top: 10%;
+  animation-name: modalopen;
+  animation-duration: 2s;
+  text-align: center
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header {
+  background: #3d1126;
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: -1px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.modal-btn .btn-remove {
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    font-size: 25px
+}
+
+.modal-btn .btn-remove:hover,  .modal-btn .btn-remove:focus{
+    color: #390920b8;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* 404 PAGE  */
 
 .error-heading {
@@ -931,5 +1005,9 @@ form .quantity-form {
     .password-reset-table .col-xs-offset-3 {
         margin-left: -50px;
         padding-left: 10px;
+    }
+    
+    .modal-header h2 {
+        font-size: 25px;
     }
 }

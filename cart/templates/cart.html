@@ -28,7 +28,23 @@
                 <div class="panel-body">
                     <div class="row">
                         <div id="remove-btn">
-                            <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-remove" role="button>">x</a>
+                            <a id="modal-btn" class="btn btn-remove" role="button">x</a>
+                        </div>
+                        
+                        <!-- Confirmation Modal -->
+                        <div id="my-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Remove</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to remove product from cart?</p>
+                                </div>
+                                <div class="modal-btn">
+                                    <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-remove" role="button>">Yes</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -37,7 +53,6 @@
                             <p>£{{ item.product.price }}</p>
                         </div>
                     </div>
-                    
                     
                     <div class="product-image" style="background-image: url('{{ MEDIA_URL}}{{ item.product.image_1 }}')"></div>
                     
