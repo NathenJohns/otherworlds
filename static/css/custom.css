@@ -129,7 +129,7 @@ footer .row {
 /*Home Page Banner Image */
 
 #slide1 {
-    background: url(../../media/images/main-image.JPG) center no-repeat;
+    background: url(../../static/images/main-image.JPG) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -138,7 +138,7 @@ footer .row {
 }
 
 #slide2 {
-    background: url(../../media/images/hand-crafted-1.jpg) center no-repeat;
+    background: url(../../static/images/hand-crafted-1.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -147,7 +147,7 @@ footer .row {
 }
 
 #slide3 {
-    background: url(../../media/images/items-together.JPG) center no-repeat;
+    background: url(../../static/images/items-together.JPG) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -948,13 +948,44 @@ form .quantity-form {
 
 /* 404 PAGE  */
 
+.error-container {
+    padding: 10%;
+}
+
 .error-heading {
-    margin-top: 100px;
     margin-bottom: 25px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     color: #4f104f;
+    transform: translateY(65px);
+    
+}
+
+.error-content p {
+    transform: translateY(50px);
+}
+
+.error-btn {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.error-btn a {
+    margin: 7.5em 0 0 0;
+}
+
+.error-btn .btn-success {
+    background-color: #390920ed;
+    border-color: #390920ed;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+}
+
+.error-btn .btn-success:hover {
+    background-color: #390920b8;
+    border-color: #390920b8;
 }
 
 /* MEDIA QUERIES */

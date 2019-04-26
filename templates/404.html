@@ -2,17 +2,19 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-       <div class="col">
-            <h1 class="error-heading">Error 404</h1>
-            <p class="lead">This page does not exist</p>
+    <div class="error-container">
+        <div class="row">
+           <div class="error-content">
+                <h1 class="error-heading">Error 404</h1>
+                <p class="lead">This page does not exist</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="container-fluid">
-            <div class="col-lg-12">
-                <div class="back-btn">
-                    <a href="{% url 'products' %}" class="btn btn-success" role="button>">Shop</a>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-lg-12 text-center">
+                    <div class="error-btn">
+                        <a href="{% url 'products' %}" class="btn btn-success" role="button>">Shop</a>
+                    </div>
                 </div>
             </div>
         </div>
