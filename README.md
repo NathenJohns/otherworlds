@@ -4,4 +4,6 @@ To run the app, open the bash terminal and enter "run" and click enter. This wil
 
 In terms of testing I use the Google Dev tools and trial by error mainly.
 
+Link to site: https://otherworlds.herokuapp.com/
+
 [![Build Status](https://travis-ci.org/NathenJohns/otherworlds.svg?branch=master)](https://travis-ci.org/NathenJohns/otherworlds)
