@@ -62,5 +62,3 @@ def checkout(request):
                     
                     
                     
-                    
-                    
