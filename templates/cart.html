@@ -10,7 +10,6 @@
         </div>
     </div>
 
-
     <div class="container-fluid">
         <div class="col-lg-12">
             <div class="checkout">
@@ -28,25 +27,10 @@
                 <div class="panel-body">
                     <div class="row">
                         <div id="remove-btn">
-                            <a id="modal-btn" class="btn btn-remove" role="button">x</a>
-                        </div>
-                        
-                        <!-- Confirmation Modal -->
-                        <div id="my-modal" class="modal">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Remove</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Are you sure you want to remove product from cart?</p>
-                                </div>
-                                <div class="modal-btn">
-                                    <a href="{% url 'remove_item_from_cart' item.id %}" class="btn btn-remove" role="button>">Yes</a>
-                                </div>
-                            </div>
+                            <button id="modal-btn" data-item-id="{{item.id}}" data-iem="{{item}}" class="btn btn-remove btn-cart-remove" role="button">x</button>
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="product-detail">
                             <h4>{{ item.product.name }}</h4>
@@ -70,7 +54,6 @@
                                         </div>
                                     </span>
                                 </div>
-                                
                             </div>
                         </form>
                     </p>
@@ -80,6 +63,24 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="remove-item-confirmation-dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Remove</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to remove product from cart?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 {% endblock %}
 
@@ -91,6 +92,35 @@
                 let value = $inputEl.val();
                 $inputEl.parent().find('button').attr('disabled', value === '');
             });
+            
+            // Add onclick event handler for all remove buttons in the cart page
+            $('.btn-remove').click(function() {
+                let itemId = $(this).data('itemId');
+                if (itemId) {
+                    // Update the dialog with the itemId value before showing
+                    let modalElement = $('#remove-item-confirmation-dialog');
+                    modalElement.data('itemId', itemId);
+                    modalElement.modal('show');
+                }
+            });
+            
+            // Add onclick event handler for the Modal primary button
+            $('#remove-item-confirmation-dialog .btn-primary').click(function() {
+                let itemId = $('#remove-item-confirmation-dialog').data('itemId');
+                if (itemId) {
+                    let url = "{% url 'remove_item_from_cart' 123 %}";
+                    document.location.href = url.replace('123', itemId);
+                }
+            });
         });
     </script>
 {% endblock body_js %}
+
+
+
+
+
+
+
+
+
