@@ -482,6 +482,7 @@ form .quantity-form {
     color: #4f104f;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: left;
 }
 
 .description-p {
