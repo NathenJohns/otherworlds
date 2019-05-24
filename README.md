@@ -45,6 +45,7 @@ The admin is only accessible by myself, and the owner of Otherworlds.
 # Development Process
 ## Automated Testing
 All automated testing was done using Travis-CI. There is automated testing done for all apps with views, models, and forms (where applicable).
+
 [![Build Status](https://travis-ci.org/NathenJohns/otherworlds.svg?branch=master)](https://travis-ci.org/NathenJohns/otherworlds).
 
 ## Manual Testing
@@ -56,15 +57,15 @@ It was also tested that only designated users i.e. the user signed in to the web
 The Stripe payment function has been verified with a test card and all transactions show up on the Stripe dashboard.
 
 # Features
-Only the head coach has access to the admin page. Since it is their team's site, it makes it easier for them to monitor all account activity and blog content. They are the only ones who will be allowed to make master changes to the site. This site has ecommerce and blog functionality. Payments are processed through Stripe, and since it is a fictional site, it only processes 'test card payments.' The events section allows the public, alumni, and swimmers to see upcoming events.
+Only myself and the owner of Otherworlds have access to the admin page. Since it is her business' site, it makes it easier for her to monitor all account activity, orders and product information. She will be the only one who will be allowed to make master changes to the site. As this site is an ecommerce one with full functionality, payments are processed through Stripe, and since it is a (soon to be) live site, it only processes all types of payments.
 
-The Shop section allows swimmers to pay their dues and purchase team-related equipment for the season. They are able to write in a size, as suits, caps, jackets, and other team apparel do not all follow the S, M, L, XL format. Sizes options are listed in the product's detail.
+The Shop section allows customers to view all products, add them to the cart, view different pages, or go to the individual product details. They are able to search by term i.e. "monkey", "brooch" or other detailed information about the item. They are also able to view and filter products by category using the drop-down menu.
 
-The Discussion (Posts) and Alumni sections have different apps because the goal was to keep them as separate as possible, as if they were included in the same app, there would have been too much content in one app. Also, there would have needed to be sorting of the type of author of the post (swimmer or alumni), and while it would have not been an issue if a swimmer or alumni was viewing it, it would be a bit of a mess for the coach to view. Also, there are certain fields that the Alumni Post Form has (images, for example) that the Post Form for the Swimmers doesn't have.
+There are different apps throughout because the aim was to keep most functionality as separate as possible, this is because if they were included in the same app, there would have been too much content in one app causing confusion when changing code.
 
-The Discussion also allows the ability to create, edit, and delete comments as well as posts. This way, swimmers are able to comment on posts asking for volunteers or with questions from previous content posted.
+This is why there is a separate 'search' app rather than integrating that code into the 'products' app (whereas filter by category is in the 'products' app). It is also for that reason that 'information' is separate to 'home' as this content is similar to each other whereas 'home' is only for features on the home page.
 
-The Events section allows both Swimmers and Alumni to view upcoming events, which include the date, location, opponent, and any other useful information relevant to the meet.
+The 'cart' section allows a customer to view the items when they add them to the cart, amend the cart and delete items. When deleting an item a modal will appear for confirmation, and the customer will not be able to amend the item to a non iteger item (this was previously allowed and created errors but has since been rectified). A customer will not be able to be viewed (on the navigation bar) until they have added an item and will not be able to progress further until they are logged in.
 
 ## Features Left to Implement
 I would like to add more styles and designs for the Checkout Page i.e. images of Mastercard, PayPal and Debit, like other ecommerce based websites do. This is more of a personal preference rather than functionality wish but something to consider.
