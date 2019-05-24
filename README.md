@@ -56,6 +56,8 @@ It was also tested that only designated users i.e. the user signed in to the web
 
 The Stripe payment function has been verified with a test card and all transactions show up on the Stripe dashboard.
 
+This site was tested across multiple browsers (Chrome, Safari, Internet Explorer, FireFox) and on multiple mobile devices (iPhone 4, 5, 7: Chrome and Safari, iPad, Samsung Galaxy) to ensure compatibility and responsiveness.
+
 # Features
 Only myself and the owner of Otherworlds have access to the admin page. Since it is her business' site, it makes it easier for her to monitor all account activity, orders and product information. She will be the only one who will be allowed to make master changes to the site. As this site is an ecommerce one with full functionality, payments are processed through Stripe, and since it is a (soon to be) live site, it only processes all types of payments.
 
