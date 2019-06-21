@@ -7,8 +7,12 @@ Users/customers are able to browse the website, register as a customer, login an
 
 This website was built for my sister and her business.
 
-# Demo
-A live demo of this project can be found at https://otherworlds.herokuapp.com/. This application is hosted on Heroku using a Postgres (MySQL Database)
+# Demo and Deployment
+A live demo of this project can be found at https://otherworlds.herokuapp.com/. This application is hosted on Heroku using a Postgres (MySQL Database).
+
+The debug mode in settings.py is set to False (as False is used for production purposes), otherwise the CSS would run into an error as Heroku cannot host CSS files in static folders, only by using external sources such as AWS (which is where all the static files are located when in production). For testing, a user should set debug mode to True and uncomment the 'import env' at the top of the file as this will import all environ variables.
+
+All secret_keys and sensitive information are in a hidden env.py file. 
 
 # UX
 This site is intended for use by established and new Customers of Otherworlds to allow them to view new products and purchase them with ease. They can do this via the Products page, and from the individual product information, or via their respective categories.
